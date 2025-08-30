@@ -1,0 +1,17 @@
+{
+    "name": "pdf-generator/php",
+    "description": "PDF Creator Generator with PHP, MySQLi, JavaScript and Tailwind CSS",
+    "type": "project",
+    "require": {
+        "tecnickcom/tcpdf": "^6.6",
+        "dompdf/dompdf": "^2.0",
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.3",
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "includes/"
+        }
+    }
+}
