@@ -1,0 +1,22 @@
+# Invoice {{ invoice_number }}
+
+Date: {{ date }}
+
+## Bill To
+
+{{ bill_to }}
+
+## Items
+
+{% set total = 0 %}
+{% for item in items %}
+{% set subtotal = (item.qty * item.price) %}
+{% set total = total + subtotal %}
+- {{ item.description }} — Qty: {{ item.qty }}, Price: ${{ '%.2f' % item.price }}, Subtotal: ${{ '%.2f' % subtotal }}
+{% endfor %}
+
+**Total: ${{ '%.2f' % total }}**
+
+---
+
+{{ notes }}
